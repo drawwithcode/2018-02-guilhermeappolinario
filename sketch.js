@@ -1,16 +1,21 @@
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 function setup() {
   createCanvas(windowWidth,windowHeight);
   angleMode(DEGREES);
   frameRate(30);
 
-  //TRANSPARENT BACKGROUND
-    background(lerpColor(color('#000000'), color('#0fefca'), frameCount/1200));
+
 }
 
 // [...] Do not forget what comes before the draw()
 
 function draw() {
 
+  //TRANSPARENT BACKGROUND
+    background(000,0,0,5);
 
 //LINES 1
         //THE TRANSLATE BELOW CENTERS EVERYTHING
@@ -28,9 +33,7 @@ function draw() {
         line(width/3,0,(cos (frameCount*3)*width/3),(sin (frameCount*3)*width/3));
 
 //ELIPSE TOP
-        noStroke();
-        fill(lerpColor(color(0,0,0,100), color(0,0,0,0),frameCount/120));
-        ellipse(0,0,width/1.5+20,width/1.5+20);
+
 
         if (frameCount == 1200) {
         ;
